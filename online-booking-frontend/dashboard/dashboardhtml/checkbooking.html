@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Booking</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dashboardcss/homepage.css">
+</head>
+
+<body class="text-center">
+    <div class="header">
+        <h1>ONLINE BOOKING SYSTEM</h1>
+        <a href="../dashboardhtml/user-homepage.html" class="btn btn-dark  ms-auto right">Home</a>
+        <a  class="btn btn-dark  ms-auto left" onclick="goBack()">Go back</a>
+    </div>
+    <div class="line"></div>
+    <div class="container mt-3" >
+        <div class="row bg-white text-black mt-2 ">
+          <div class="col">
+            <h2 class="p-2 ">CHECK BOOKING</h2>
+          </div>
+        </div>
+        <div class="row mt-3">
+            
+            <div class="col-9 input-group">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="txtLocation" placeholder="Location" name="location">
+                    <label for="txtLocation" style="color: black;">Location</label>  
+                </div>
+                <div class="form-floating">
+                  <input type="date" class="form-control" id="txtStartdate" placeholder="Start-Date" name="startdate">
+                  <label for="txtStartdate" style="color: black;">Start-date</label>
+              </div>
+              <div class="form-floating">
+                <input type="number" class="form-control" id="txtPrice" placeholder="Price" name="price">
+                <label for="txtPrice" style="color: black;">Price</label>
+            </div>
+                <button class="btn btn-dark" id="btnSearch" style="background-color: black;">Search</button>
+            </div>
+           
+        </div>
+        <div class="row mt-3">
+          <table class="table table-bordered" id="table" style="color: white; ">
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>Location </th>
+                <th>Start-Date</th>
+                <th>End-Date</th>
+                <th>startingTime</th>
+                <th>endingTime</th>
+                <th>Price</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+           
+          </table>
+    
+        </div>
+      </div>
+    
+     
+      <script src="../dashboardjs/checkbooking.js"></script>
+</body>
+</html>
